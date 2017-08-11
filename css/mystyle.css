@@ -514,8 +514,25 @@ section{
     height: 100%;
     position: relative;
     overflow: hidden;
-
 }
+.team-wrap .team:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    background: #fdea00;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+.team-wrap .team:hover:before{
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+    -webkit-transition: -webkit-transform 0.9s;
+    transition: transform 0.9s;
+}
+
 .team-wrap .team h5{
     font-weight: 300; 
     text-align: center;
