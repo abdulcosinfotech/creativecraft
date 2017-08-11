@@ -10,14 +10,13 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!-- Isotope -->
-    <link href="css/isotope.css" rel="stylesheet">
     <!-- Animation CSS -->
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <!-- Popup CSS -->
     <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
     <link href="css/mystyle.css" rel="stylesheet" type="text/css">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 </head>
@@ -135,19 +134,19 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#branding" role="tab">
-                            <i class="icon-website icon"></i><span>Branding</span></a>
+                            <i class="icon-branding icon"></i><span>Branding</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#animation" role="tab">
-                            <i class="icon-website icon"></i><span>Animation</span></a>
+                            <i class="icon-animation icon"></i><span>Animation</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#digital" role="tab">
-                            <i class="icon-website icon"></i><span>Digital</span></a>
+                            <i class="icon-digital icon"></i><span>Digital</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#fineart" role="tab">
-                            <i class="icon-website icon"></i><span>Fine Art</span></a>
+                            <i class="icon-art icon"></i><span>Fine Art</span></a>
                         </li>
                     </ul>
                     <!-- Tab content -->
@@ -312,19 +311,19 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#worksbranding" role="tab">
-                            <i class="icon-website icon"></i><span>Branding</span></a>
+                            <i class="icon-branding icon"></i><span>Branding</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#worksanimation" role="tab">
-                            <i class="icon-website icon"></i><span>Animation</span></a>
+                            <i class="icon-animation icon"></i><span>Animation</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#worksdigital" role="tab">
-                            <i class="icon-website icon"></i><span>Digital</span></a>
+                            <i class="icon-digital icon"></i><span>Digital</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#worksfineart" role="tab">
-                            <i class="icon-website icon"></i><span>Fine Art</span></a>
+                            <i class="icon-art icon"></i><span>Fine Art</span></a>
                         </li>
                     </ul>
                     <!-- Tab content -->
@@ -606,6 +605,14 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script>
+$('.carousel').carousel({
+  interval: 2000,
+  cycle: true,  
+  pause: "null"
+})
+    </script>
+
+    <script>
     // Prevent console.log from generating errors in IE for the purposes of the demo
     // if ( ! window.console ) console = { log: function(){} };
 
@@ -623,9 +630,7 @@
             }*/
     });
     </script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/portfolio.js"></script>
-    <!-- SHRINK HEADER SCRIPT START  -->
+     <!-- SHRINK HEADER SCRIPT START  -->
     <!--<script>
 $(function(){
  var shrinkHeader = 665;
