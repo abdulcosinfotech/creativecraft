@@ -168,8 +168,30 @@ p{
     justify-content: center;
     margin: 0 10px;
     height: 30px;
+    font-weight: 400;
     padding: 8px 15px;
+    position: relative;
+    overflow: hidden;
 }
+/*.header .navbar-nav .nav-link:not(.current):before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    background: #ec1c24;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+.header .navbar-nav .nav-link:hover:before{
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+    -webkit-transition: -webkit-transform 0.9s;
+    transition: transform 0.9s;
+}*/
+
+
 .header .navbar-nav .nav-link.current{
     color: #231f20;
     border: 1px solid #231f20; 
@@ -177,7 +199,13 @@ p{
 }
 
 @media screen and (max-width: 990px) {
-    
+    .header .navbar-nav .nav-item{
+        text-align: center;
+        margin: 10px 0;
+    }
+    .header .navbar-nav .nav-link.current{
+        display: inline-flex;
+    }
 }
 
 /*--------------------------------Navigation---------------------------------*/
@@ -279,6 +307,9 @@ section{
 /*----------------------------------Contact----------------------------------*/
 
 /*-----------------------------------Home------------------------------------*/
+.banner-carousel .carousel-inner{   
+    pointer-events: none;
+}
 .banner-carousel .carousel-inner .carousel-item img{
     object-fit: cover;
     width: 100%;
@@ -288,17 +319,60 @@ section{
     padding: 15px;
     width: 45vw;
     margin: auto;
-    transform: translateY(-35vh);
+    /*transform: translateY(-35vh);*/
+    bottom: 40%;
     color: #000000;
     text-transform: uppercase;
 }
+
+.banner-carousel .carousel-inner .carousel-item .carousel-caption h4:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #ec1c24;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.banner-carousel .carousel-inner .carousel-item.active .carousel-caption h4:before{
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+    -webkit-transition: -webkit-transform 0.9s;
+    transition: transform 0.9s;
+}
+.banner-carousel .carousel-inner .carousel-item .carousel-caption h3:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #fdea00;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.banner-carousel .carousel-inner .carousel-item.active .carousel-caption h3:before{
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+     -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
 .banner-carousel .carousel-inner .carousel-item .carousel-caption h4{
     font-weight: 100;
     font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
 }
 .banner-carousel .carousel-inner .carousel-item .carousel-caption h3{
     font-size: 3rem;
     font-weight: 300;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
 }
 
 @media screen and (max-width: 767px) {
@@ -319,6 +393,33 @@ section{
 /*-----------------------------------Home------------------------------------*/
 
 /*-----------------------------------Tabs------------------------------------*/
+.icon-website{
+  -webkit-mask: url(../images/website.png) no-repeat center / contain;
+  -moz-mask: url(../images/website.png) no-repeat center / contain;
+  mask: url(../images/website.png) no-repeat center / contain;
+}
+.icon-branding{
+  -webkit-mask: url(../images/branding.png) no-repeat center / contain;
+  -moz-mask: url(../images/branding.png) no-repeat center / contain;
+  mask: url(../images/branding.png) no-repeat center / contain;
+}
+
+.icon-animation{
+  -webkit-mask: url(../images/animation.png) no-repeat center / contain;
+  -moz-mask: url(../images/animation.png) no-repeat center / contain;
+  mask: url(../images/animation.png) no-repeat center / contain;
+}
+
+.icon-digital{
+  -webkit-mask: url(../images/digital.png) no-repeat center / contain;
+  -moz-mask: url(../images/digital.png) no-repeat center / contain;
+  mask: url(../images/digital.png) no-repeat center / contain;
+}
+.icon-art{
+  -webkit-mask: url(../images/art.png) no-repeat center / contain;
+  -moz-mask: url(../images/art.png) no-repeat center / contain;
+  mask: url(../images/art.png) no-repeat center / contain;
+}
 
 .services-tabs, .works-tabs{
     width: 100%;
@@ -347,6 +448,11 @@ section{
 .services-tabs .nav-item a.nav-link span, .works-tabs .nav-item a.nav-link span{
     display: flex;
 }
+.services-tabs .nav-item a.nav-link i, .works-tabs .nav-item a.nav-link i{
+    height: 32px;
+    width: 32px;
+}
+
 .services-tabs .nav-item a:hover,
 .services-tabs .nav-item a.active,
 .works-tabs .nav-item a:hover,
@@ -374,7 +480,7 @@ section{
         display: none;
     }
     .services-tabs .nav-item a.nav-link, .works-tabs .nav-item a.nav-link{
-        padding: 15px;
+        padding: 10px;
     }
     .services-tabs-cont, .works-tabs-cont {
         margin: 10px 15px;
@@ -517,15 +623,6 @@ section{
     top: -200px;
 }
 
-.icon-website{
-  width: 24px;
-  height: 24px;
-  -webkit-mask: url(../images/website.svg) no-repeat center;
-  -moz-mask: url(../images/website.svg) no-repeat center;
-  mask: url(../images/website.svg) no-repeat center;
-}
-
-
 
 
 
@@ -556,33 +653,3 @@ section{
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close{
     display: none;
 }
-
-
-/* .mfp-zoom-in {
-  start state
-  animate in
-  animate out
-}
-.mfp-zoom-in .mfp-with-anim {
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  transform: scale(0.8);
-}
-.mfp-zoom-in.mfp-bg {
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}
-.mfp-zoom-in.mfp-ready .mfp-with-anim {
-  opacity: 1;
-  transform: scale(1);
-}
-.mfp-zoom-in.mfp-ready.mfp-bg {
-  opacity: 0.8;
-}
-.mfp-zoom-in.mfp-removing .mfp-with-anim {
-  transform: scale(0.8);
-  opacity: 0;
-}
-.mfp-zoom-in.mfp-removing.mfp-bg {
-  opacity: 0;
-} */
