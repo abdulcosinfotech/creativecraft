@@ -258,12 +258,12 @@ section{
 }
 
 @media screen and (max-width: 990px) {
-
-}
-@media screen and (max-width: 767px) {
     .section-wrap:not(.home-sec){
         height: auto;
     }
+
+}
+@media screen and (max-width: 767px) {
 }
 
 
@@ -321,7 +321,7 @@ section{
 .banner-carousel .carousel-inner .carousel-item .carousel-caption{
     background: #FFFFFF;
     padding: 15px;
-    width: 45vw;
+    width: 35vw;
     margin: auto;
     /*transform: translateY(-35vh);*/
     bottom: 40%;
@@ -366,17 +366,15 @@ section{
 
 .banner-carousel .carousel-inner .carousel-item .carousel-caption h4{
     font-weight: 100;
-    font-size: 3rem;
+    font-size: 2.4rem;
     position: relative;
     overflow: hidden;
-    display: inline-block;
 }
 .banner-carousel .carousel-inner .carousel-item .carousel-caption h3{
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 300;
     position: relative;
     overflow: hidden;
-    display: inline-block;
 }
 
 @media screen and (max-width: 767px) {
@@ -667,6 +665,12 @@ section{
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 } */
+
+@media screen and (max-width: 767px) {
+    .work-card .work-card-img {
+        height: 240px;
+    }
+}
 /*-----------------------------------Works-----------------------------------*/
 
 /*--------------------------------Tilt Effect--------------------------------*/
