@@ -160,6 +160,9 @@ p{
 .header .navbar-brand{
     width: 100px;
 }
+.navbar-toggler:focus{
+    outline: none !important;
+}
 .header .navbar-nav .nav-link{
     color: #231f20;
     min-width: 120px;
@@ -168,10 +171,11 @@ p{
     justify-content: center;
     margin: 0 10px;
     height: 30px;
-    font-weight: 400;
     padding: 8px 15px;
     position: relative;
     overflow: hidden;
+    font-size: 18px;
+    font-weight: 400;
 }
 /*.header .navbar-nav .nav-link:not(.current):before{
     content: '';
@@ -291,7 +295,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: right;
     color: #000000;
     margin: 15px 0;
@@ -325,7 +329,7 @@ section{
     text-transform: uppercase;
 }
 
-.banner-carousel .carousel-inner .carousel-item .carousel-caption h4:before{
+/*.banner-carousel .carousel-inner .carousel-item .carousel-caption h4:before{
     content: '';
     position: absolute;
     height: 100%;
@@ -358,7 +362,7 @@ section{
     transform: translate3d(-100%,0,0);
      -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-}
+}*/
 
 .banner-carousel .carousel-inner .carousel-item .carousel-caption h4{
     font-weight: 100;
@@ -437,6 +441,7 @@ section{
     text-transform: uppercase;
     margin: 0 15px;
     padding: 5px 30px;
+    border-radius: 30px;
     -webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.50, 0.250); 
    -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.50, 0.250); 
      -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.50, 0.250); 
@@ -460,7 +465,6 @@ section{
     border-color: transparent;
     background-color: #000000;
     color: #FFFFFF;
-    border-radius: 30px;
     /*padding: 5px 30px;*/
 }
 .services-tabs-cont, .works-tabs-cont{
@@ -515,7 +519,7 @@ section{
     position: relative;
     overflow: hidden;
 }
-.team-wrap .team:before{
+/* .team-wrap .team:before{
     content: '';
     position: absolute;
     height: 100%;
@@ -531,7 +535,7 @@ section{
     transform: translate3d(100%,0,0);
     -webkit-transition: -webkit-transform 0.9s;
     transition: transform 0.9s;
-}
+} */
 
 .team-wrap .team h5{
     font-weight: 300; 
@@ -559,6 +563,9 @@ section{
 
 /*-----------------------------------Works-----------------------------------*/
 
+.work-card{
+    background: transparent;
+}
 .work-card .card-title{
     font-weight: 300;
     position: relative;
@@ -566,7 +573,6 @@ section{
     margin: 0 0 0.5rem 0;
 }
 /* .work-card .image-popup {
-    height: 200px;
     display: flex;
 } */
 .work-card img.card-img-top{
@@ -574,11 +580,48 @@ section{
     width: 100%;
     height: 100%;
 }
+.work-card .work-card-img{
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+.work-card .work-card-img .work-overlay{   
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: translate3d(0,-150%,0);
+    transform: translate3d(0,-150%,0);
+}
+.work-card:hover .work-card-img .work-overlay{
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.work-card .work-card-img .work-overlay .zoom-btn{
+    background: #fff url(../images/icon-zoom.png) no-repeat center center / 30px;
+    border-radius: 50%;
+    color: #5b974e;
+    font-size: 26px;
+    line-height: 50px;
+    margin: 0 auto 15px;
+    width: 50px;
+    height: 50px;
+}
+/*
 .work-card{
     position:relative;
     overflow:hidden;
     height: 200px;
 }
+
 .work-card .card-block{
     text-decoration: none;
     padding:1em;
@@ -589,7 +632,7 @@ section{
     height:100%;
     transition: bottom .2s;
 }
-.work-card:hover .card-block{
+ .work-card:hover .card-block{
     bottom:0;
 
 }
@@ -623,7 +666,7 @@ section{
 .work-card:hover .card-block .card-text{
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-}
+} */
 /*-----------------------------------Works-----------------------------------*/
 
 /*--------------------------------Tilt Effect--------------------------------*/
@@ -670,3 +713,38 @@ section{
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close{
     display: none;
 }
+
+
+
+/*.carousel-inner{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 850px;
+    perspective: 2500px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+.carousel-item:nth-child(1):before{
+    content: '';
+    background: rgba(87, 31, 156, 0.7);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.carousel-item:before:nth-child(2){
+    content: '';
+    background: rgba(233, 30, 99, 0.7);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.carousel-item:nth-child(3):before{
+    content: '';
+    background: rgba(87, 31, 156, 0.7);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}*/
