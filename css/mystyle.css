@@ -243,12 +243,14 @@ section{
     padding: 30px 0;
     background: #FFFFFF;
     border-bottom: 1px solid rgb(240, 240, 240);
+    overflow: hidden;
 }
 .services-sec{
     padding: 30px 0 0 0;
     background: #f1f1f1;
     /*background: rgb(200, 200, 200);*/
     border-bottom: 1px solid rgb(240, 240, 240);
+    overflow: hidden;
 }
 .team-sec{
     padding: 30px 0 0 0;
@@ -261,11 +263,13 @@ section{
     background: #f1f1f1;
     /*background: rgb(200, 200, 200);*/
     border-bottom: 1px solid rgb(240, 240, 240);
+    overflow: hidden;
 }
 .contact-sec{
     padding: 30px 0;
     background: #FFFFFF;
     border-bottom: 1px solid rgb(240, 240, 240);
+    overflow: hidden;
 }
 
 
@@ -718,23 +722,6 @@ section{
 /*-----------------------------------Works-----------------------------------*/
 
 /*--------------------------------Tilt Effect--------------------------------*/
-.main-tilt{
-    position: relative;
-}
-.tilt-inner{
-   /*  -webkit-transform: translateZ(50px) translateY(-50%) translateX(-50%);
-   transform: translateZ(50px) translateY(-50%) translateX(-50%);
-   position: absolute; */
-    position: absolute;
-    width: 400px;
-    left: -130px;
-    top: -200px;
-}
-
-
-
-
-
 .about-img-wrap{
     position: relative;
     /*width: 200px;
