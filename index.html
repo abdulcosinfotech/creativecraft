@@ -67,7 +67,6 @@
   </nav>
   <!-- NAVIGATION HEADER END -->
 
-
     <section id="home">
         <div class="section-wrap home-sec">
             <div class="carousel slide banner-carousel" data-ride="carousel">
@@ -98,14 +97,17 @@
         </div>
     </section>
 
-
     <section id="about">
         <div class="section-wrap about-sec">
             <div class="container h-100">
                 <div class="row h-100">
                     <div class="col-md-5">
-                        <div class="img-wrap d-flex justify-content-center justify-content-md-start">
+                        <!-- <div class="img-wrap d-flex justify-content-center justify-content-md-start">
                             <img src="images/img-pencil.png" class="img-fluid " alt="">
+                        </div> -->
+                        <div class="about-img-wrap">
+                            <img src="images/about-ef/about1.png" class="about1 about-tilt-bg" alt="">
+                            <img src="images/about-ef/about2.png" class="about2 about-tilt-img" alt="">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -120,7 +122,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="services">
         <div class="section-wrap services-sec">
@@ -228,7 +229,6 @@
         </div>
     </section>
 
-
     <section id="team">
         <div class="section-wrap team-sec">
             <div class="container h-100">
@@ -289,9 +289,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="img-wrap">
+                    <div class="col-md-5 d-flex align-items-center">
+                        <!-- <div class="img-wrap">
                             <img src="images/team.png" class="img-fluid" alt="">
+                        </div> -->
+                        <div class="team-img-wrap">
+                            <img src="images/team-ef/team1.png" class="team1 team-tilt-bg" alt="">
+                            <img src="images/team-ef/team2.png" class="team2 team-tilt-img-pad" alt="">
+                            <img src="images/team-ef/team3.png" class="team3 team-tilt-img-paper" alt="">
+                            <img src="images/team-ef/team4.png" class="team4 team-tilt-img-pen" alt="">
                         </div>
                     </div>
                 </div>
@@ -656,29 +662,36 @@
                                 <li><a class="mail" href="mailto:info@creativecraftksa.com">info@creativecraftksa.com</a></li>
                                 <li><span class="address">Dammam 32253, P.O.Box - 4253, Bilal Bin Rabah Street, Madinat Al Umal, KSA</span></li>
                             </ul>
-                            <img src="images/contact-img.png" class="img-fluid" alt="">
+                            <!-- <div class="img-wrap">
+                              <img src="images/contact-img.png" class="img-fluid" alt="">
+                            </div> -->
+                            <div class="contact-img-wrap">
+                              <img src="images/contact-ef/contact1.png" class="contact1 contact-tilt-bg" alt="">
+                              <img src="images/contact-ef/contact2.png" class="contact2 contact-tilt-img" alt="">
+                            </div>
+
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="block-text contact-form">
                             <form action="">
                                 <div class="form-group">
-                                    <label class="text-uppercase">Name</label>
+                                    <label>Name</label>
                                     <input type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-uppercase">Email</label>
+                                    <label>Email</label>
                                     <input type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-uppercase">Phone</label>
+                                    <label>Phone</label>
                                     <input type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-uppercase">Messages</label>
+                                    <label>Messages</label>
                                     <textarea class="form-control" rows="4"></textarea>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group text-right">
                                     <button type="submit" class="btn btn-lg btn-submit">Submit</button>
                                 </div>
                             </form>
@@ -689,25 +702,46 @@
         </div>
     </section>
 
-    <!-- <footer class="footer">
+    <footer class="footer py-2">
         <div class="container text-center">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <p class="copy">© 2015 Interior. All Rights Reserved </p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <ul class="list-unstyled list-inline pull-right text-uppercase">
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Legal</a></li>
-                </ul>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <p class="copy m-0">© 2017 CreativeCraft. All Rights Reserved </p>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <script src="js/jquery-parallax.js"></script>
+
+  <script>
+    $( document ).mousemove( function( e ) {
+      $( '.about1' ).parallax( -40, e );
+      $( '.about2' ).parallax( 30 , e );
+    });
+  </script>
+
+
+  <script>
+    $( document ).mousemove( function( e ) {
+      $( '.team1' ).parallax( -40, e );
+      $( '.team2' ).parallax( 30 , e );
+      $( '.team3' ).parallax( 15 , e );
+      $( '.team4' ).parallax( 10 , e );
+    });
+  </script>
+
+  <script>
+    $( document ).mousemove( function( e ) {
+      $( '.contact1' ).parallax( -40, e );
+      $( '.contact2' ).parallax( 30 , e );
+    });
+  </script>
+
+
     <script>
 $('.carousel').carousel({
   interval: 2000,
