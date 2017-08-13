@@ -214,12 +214,22 @@ p{
 
 /*--------------------------------Navigation---------------------------------*/
 
+/*----------------------------------Footer-----------------------------------*/
+.footer{
+    background: #231f20;
+}
+.footer .copy{
+    color: #FFFFFF;
+    font-weight: 300;
+}
+/*----------------------------------Footer-----------------------------------*/
+
 /*-------------------------------Section Style-------------------------------*/
 section{
     position: relative;
 }
 .section-wrap:not(.home-sec){
-    height: 100vh;
+    min-height: 100vh;
 }
 .home-sec{
     height: 100vh;
@@ -284,11 +294,16 @@ section{
 .contact-form .form-group{
     margin: 35px 0;
 }
+.contact-form .form-group label{
+    font-size: 1rem;
+}
 .contact-form .form-group input{
-    border-radius: 50px;
+    /*border-radius: 50px;*/
+    border-radius: 5px;
 }
 .contact-form .form-group textarea{
-    border-radius: 20px;
+    /*border-radius: 20px;*/
+    border-radius: 5px;
 }
 
 .contact-details li{
@@ -666,31 +681,6 @@ section{
     transform: translate3d(0,0,0);
 } */
 
-@media screen and (max-width: 767px) {
-    .work-card .work-card-img {
-        height: 240px;
-    }
-}
-/*-----------------------------------Works-----------------------------------*/
-
-/*--------------------------------Tilt Effect--------------------------------*/
-.main-tilt{
-    position: relative;
-}
-.tilt-inner{
-   /*  -webkit-transform: translateZ(50px) translateY(-50%) translateX(-50%);
-   transform: translateZ(50px) translateY(-50%) translateX(-50%);
-   position: absolute; */
-    position: absolute;
-    width: 400px;
-    left: -130px;
-    top: -200px;
-}
-
-
-
-
-
 /* This block of CSS adds opacity transition to background */
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
@@ -718,37 +708,112 @@ section{
     display: none;
 }
 
+@media screen and (max-width: 767px) {
+    .work-card .work-card-img {
+        height: 240px;
+    }
+}
+/*-----------------------------------Works-----------------------------------*/
+
+/*--------------------------------Tilt Effect--------------------------------*/
+.main-tilt{
+    position: relative;
+}
+.tilt-inner{
+   /*  -webkit-transform: translateZ(50px) translateY(-50%) translateX(-50%);
+   transform: translateZ(50px) translateY(-50%) translateX(-50%);
+   position: absolute; */
+    position: absolute;
+    width: 400px;
+    left: -130px;
+    top: -200px;
+}
 
 
-/*.carousel-inner{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    height: 850px;
-    perspective: 2500px;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
+
+
+
+.about-img-wrap{
+    position: relative;
+    /*width: 200px;
+    height: 200px;*/
 }
-.carousel-item:nth-child(1):before{
-    content: '';
-    background: rgba(87, 31, 156, 0.7);
+
+.about-tilt-img{
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: auto; 
+    height: auto;
+    z-index: 2;
+}
+.about-tilt-bg {
+    position: absolute;
+    top: 190px;
+    left: 120px;
+    z-index: 1;
+}
+
+
+
+.team-img-wrap{
+    position: relative;
+    width: 100%;
+    height: 50%;
+/*    width: 200px;
+    height: 200px;*/
+}
+
+.team-tilt-img-pad{
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: auto; 
+    height: auto;
+    z-index: 2;
+}
+.team-tilt-img-paper{
+    position: absolute; 
+    bottom: -30px; 
+    right: 40px;
+    width: auto; 
+    height: auto;
+    z-index: 3;
+}
+.team-tilt-img-pen{
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    width: auto; 
+    height: auto;
+    z-index: 3;
+}
+.team-tilt-bg {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 1;
+}
+
+
+
+.contact-img-wrap{
+    position: relative;
     width: 100%;
     height: 100%;
-    display: block;
-    position: absolute;
 }
-.carousel-item:before:nth-child(2){
-    content: '';
-    background: rgba(233, 30, 99, 0.7);
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
+
+.contact-tilt-img{
+    position: absolute; 
+    bottom: 80px; 
+    right: 0;
+    width: auto; 
+    height: auto;
+    z-index: 2;
 }
-.carousel-item:nth-child(3):before{
-    content: '';
-    background: rgba(87, 31, 156, 0.7);
-    width: 100%;
-    height: 100%;
-    display: block;
+.contact-tilt-bg {
     position: absolute;
-}*/
+    top: 80px;
+    left: 30px;
+    z-index: 1;
+}
